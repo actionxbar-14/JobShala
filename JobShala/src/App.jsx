@@ -6,16 +6,14 @@ import JobApplyPage from './pages/JobApplyPage'
 import JobStatusPage from './pages/JobStatusPage'
 import Home from './components/Home'
 import Footer from './components/Footer'
-import { useParams } from 'react-router-dom'
-
 
 const App = () => {
-  const { id } = useParams();
+
 
   return (
-    <body>
-      {/* <h1 className='bg-blue-700'>My App</h1> */}
-     
+  
+      <>
+        
        <Router>
        <Navbar/>
         
@@ -31,7 +29,9 @@ const App = () => {
           
        </Router>
       
-    </body>
+      </>
+     
+
   )
 }
 
