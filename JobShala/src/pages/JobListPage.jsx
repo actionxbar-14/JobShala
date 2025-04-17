@@ -1,18 +1,16 @@
-import React from 'react'
-import Home from '../components/Home'
+import React from "react";
+import JobListFooter from "../components/JobListFooter";
+import JobListCard from "../components/JobListCard.jsx";
 
 const JobListPage = () => {
   return (
-    <div className=''>
-      <p>JobList Page</p>
-      {/* <Home/> */}
-      
+    <>
+      <div className="flex flex-wrap  border-b-2 border-white/5 justify-center items-center bg-white/5 p-4 pb-8">
+        <JobListCard />
+      </div>
+      <JobListFooter />
+    </>
+  );
+};
 
-
-        {/* <h1>Job List Page</h1> */}
-      
-    </div>
-  )
-}
-
-export default JobListPage
+export default JobListPage;

@@ -1,16 +1,16 @@
-// // import React from 'react'
-// // import FormApply from '../components/FormApply'
+// import React from 'react'
+// import FormApply from '../components/FormApply'
 
-// // const JobApplyPage = () => {
-// //   return (
-// //     <div className=''>
-// //        <FormApply/>
+// const JobApplyPage = () => {
+//   return (
+//     <div className=''>
+//        <FormApply/>
       
-// //     </div>
-// //   )
-// // }
+//     </div>
+//   )
+// }
 
-// // export default JobApplyPage
+// export default JobApplyPage
 
 
 // import { useParams, useNavigate } from "react-router-dom";
@@ -118,101 +118,132 @@
 
 
 
-import { useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { JobData } from "../data/JobData";
+// import { useParams, useNavigate } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import { JobData } from "../data/JobData.js";
 
-const JobApplyPage = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
+// const JobApplyPage = () => {
+//   const { id } = useParams();
+//   const navigate = useNavigate();
 
-  const [jobData, setJobData] = useState(null);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    resume: null,
-    coverLetter: "",
-  });
+//   const [jobData, setJobData] = useState('');
+//   const [form, setForm] = useState({
+//     name: "",
+//     email: "",
+//     resume: null,
+//     coverLetter: "",
+//   });
 
-  useEffect(() => {
-    const job = JobData.find((j) => j.id === parseInt(id));
-    setJobData(job);
-  }, [id]);
+//   useEffect(() => {
+//     const job = JobData.find((j) => j.id === parseInt(id));
+//     setJobData(job);
+//   }, [id]);
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: files ? files[0] : value,
-    }));
-  };
+//   // useEffect(() => {
+//   //   const job = JobData.find((j) => j.id === parseInt(id));
+//   //   if (job) {
+//   //     setJobData(job);
+//   //   } else {
+//   //     console.warn("No job found for ID:", id);
+//   //     navigate("/joblist"); // or show an error
+//   //   }
+//   // }, [id]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const storedStatus = JSON.parse(localStorage.getItem("appliedJobs")) || [];
+//   const handleChange = (e) => {
+//     const { name, value, files } = e.target;
+//     setForm((prev) => ({
+//       ...prev,
+//       [name]: files ? files[0] : value,
+//     }));
+//   };
 
-    const newEntry = {
-      jobId: id,
-      jobTitle: jobData.title,
-      ...form,
-    };
+//   const handleSubmit = (e) => {
 
-    localStorage.setItem("appliedJobs", JSON.stringify([...storedStatus, newEntry]));
-    navigate("/status");
-  };
+    
+//   if (!jobData) {
+//     console.error("Job data not found, aborting submit.");
+//     return;
+//   }
 
-  if (!jobData) return <div className="text-center p-10 text-white">Loading...</div>;
+//     e.preventDefault();
+//     const storedStatus = JSON.parse(localStorage.getItem("appliedJobs")) || [];
 
-  return (
-    <div className="p-6 max-w-3xl mx-auto bg-white/10 text-white backdrop-blur-md shadow-md rounded-md">
-      <h2 className="text-2xl font-bold mb-4">Apply for {jobData.title}</h2>
-      <p className="mb-4 text-gray-300">{jobData.type} • 📍 {jobData.location}</p>
+//     const newEntry = {
+//       jobId: id,
+//       jobTitle: jobData.title,
+//       ...form,
+//     };
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
-          required
-        />
-        <input
-          type="file"
-          name="resume"
-          accept=".pdf,.docx"
-          onChange={handleChange}
-          className="w-full p-2 bg-transparent border border-white/20 rounded text-gray-300"
-          required
-        />
-        <textarea
-          name="coverLetter"
-          placeholder="Write your cover letter..."
-          value={form.coverLetter}
-          onChange={handleChange}
-          className="w-full p-2 bg-transparent border border-white/20 rounded h-32 placeholder-gray-400"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Submit Application
-        </button>
-      </form>
-    </div>
-  );
-};
+//     localStorage.setItem("appliedJobs", JSON.stringify([...storedStatus, newEntry]));
+//     navigate("/status");
+//   };
 
-export default JobApplyPage;
+//   if (!jobData) return <div className="text-center p-10 text-white">Loading...</div>;
+
+//   return (
+//     <div className="p-6 max-w-3xl mx-auto bg-white/10 text-white backdrop-blur-md shadow-md rounded-md">
+//       <h2 className="text-2xl font-bold mb-4">Apply for {jobData.title}</h2>
+//       <p className="mb-4 text-gray-300">{jobData.type} •  {jobData.location}</p>
+
+//       <form onSubmit={handleSubmit} className="space-y-4">
+//         <input
+//           type="text"
+//           name="name"
+//           placeholder="Your Name"
+//           value={form.name}
+//           onChange={handleChange}
+//           className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
+//           required
+//         />
+//         <input
+//           type="email"
+//           name="email"
+//           placeholder="Your Email"
+//           value={form.email}
+//           onChange={handleChange}
+//           className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
+//           required
+//         />
+//         <input
+//           type="file"
+//           name="resume"
+//           accept=".pdf,.docx"
+//           onChange={handleChange}
+//           className="w-full p-2 bg-transparent border border-white/20 rounded text-gray-300"
+//           required
+//         />
+//         <textarea
+//           name="coverLetter"
+//           placeholder="Write your cover letter..."
+//           value={form.coverLetter}
+//           onChange={handleChange}
+//           className="w-full p-2 bg-transparent border border-white/20 rounded h-32 placeholder-gray-400"
+//           required
+//         ></textarea>
+//         <button
+//           type="submit"
+//           className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+//         >
+//           Submit Application
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default JobApplyPage;
+
+// // import React from 'react'
+
+// // const JobApplyPage = () => {
+//   return (
+//     <div>
+//       <h1>JobApply PAge</h1>
+      
+//     </div>
+//   )
+// }
+
+// export default JobApplyPage
+
 

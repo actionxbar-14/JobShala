@@ -44,5 +44,6 @@ export const JobData = [
       timeRemaining: "5d 2h",
       logo: "https://img.icons8.com/ios/50/react-native.png"
     }
+    
   ]
   

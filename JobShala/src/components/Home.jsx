@@ -12,13 +12,13 @@ const Home = () => {
 
       <div className=" hero-section border-b-2 border-gray-500 grid place-items-center p-16 gap-6 grid-cols-2">
         <div className="hero-text-section w-[50] pr-4">
-          <h1 className="text-6xl text-[54px] pb-6 font-bold text-[#c1dcf7]">
+          <h1 className="text-4xl pb-20 font-bold text-[#c1dcf7]">
             Discover Your Perfect Job: Matching Your Interests and Skills
           </h1>
           <p className="text-[#93b1b5]">
             Unlock Your Potential, Embrace Your Future.
           </p>
-          <p className="text-[#fff] pt-2">
+          <p className="text-[#fff] pt-2 text-sm text-justify">
             Each month, more than 3 million job seekers turn to website in their
             search for work, making over 140,000 applications every single day
           </p>

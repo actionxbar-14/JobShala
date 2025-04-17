@@ -107,7 +107,7 @@ const JobCard = () => {
             </div>
 
             {/* RIGHT: Apply Button */}
-            <Link to={`/apply/${data.id}`}>
+            <Link to={`/apply/:${data.id}`}>
 
               <button className="flex items-center gap-1 text-sm bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-gray-600 border border-transparent hover:border-blue-600 transition-all">
                 Apply Now <span>→</span>

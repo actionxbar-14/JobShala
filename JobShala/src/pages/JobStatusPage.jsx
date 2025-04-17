@@ -1,4 +1,4 @@
-const Status = () => {
+const JobStatusPage = () => {
   const submittedApps = JSON.parse(localStorage.getItem("appliedJobs")) || [];
 
   return (
@@ -23,4 +23,4 @@ const Status = () => {
   );
 };
 
-export default Status;
+export default JobStatusPage;

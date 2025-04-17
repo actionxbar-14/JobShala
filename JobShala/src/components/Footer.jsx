@@ -4,7 +4,7 @@ import { RiGraduationCapFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <footer className="bg-white/5 text-white p-6 mt-6 pt-12 pb-6 px-4 md:px-20">
+    <footer className="bg-white/5 text-white p-6 pt-12 pb-6 px-4 md:px-20">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Branding */}
         <div>
