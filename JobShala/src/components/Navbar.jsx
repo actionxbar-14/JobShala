@@ -28,15 +28,14 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Button (Mobile only) */}
+       
         <button className="md:hidden text-white focus:outline-none" onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center bg-[#003554] border-t border-white/10 pb-4">
+        <div className="md:hidden flex flex-col items-center bg-[#003584] transition-all 300s border-t border-white/10 pb-4">
           <Link to="/" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white py-2">
             Home
           </Link>
