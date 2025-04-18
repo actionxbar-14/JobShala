@@ -1,9 +1,8 @@
 import { createContext, useContext, useState } from "react";
 
-// Create context
 const JobContext = createContext();
 
-// Create provider
+
 export const JobProvider = ({ children }) => {
   const [applications, setApplications] = useState([]);
 
@@ -18,5 +17,5 @@ export const JobProvider = ({ children }) => {
   );
 };
 
-// Custom hook
+
 export const useJobContext = () => useContext(JobContext);

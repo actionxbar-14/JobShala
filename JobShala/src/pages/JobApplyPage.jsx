@@ -1,67 +1,5 @@
 
 
-// import React from 'react'
-
-// const JobApplyPage = () => {
-//   return (
-    
-
-//     <div className="p-6 max-w-3xl mx-auto bg-white/10 text-white backdrop-blur-md shadow-md rounded-md">
-//       {/* <h2 className="text-2xl font-bold mb-4">Apply for this job {jobData.title}</h2> */}
-//       <h2 className="text-2xl font-bold mb-4">Apply for this job</h2>
-//       <p className="mb-4 text-gray-300">job type •  job role</p>
-//       {/* <p className="mb-4 text-gray-300">{jobData.type} •  {jobData.location}</p> */}
-
-//       <form  className="space-y-4">
-//         <input
-//           type="text"
-//           name="name"
-//           placeholder="Your Name"
-//           // value={form.name}
-//           // onChange={handleChange}
-//           className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
-//           required
-//         />
-//         <input
-//           type="email"
-//           name="email"
-//           placeholder="Your Email"
-//           // value={form.email}
-//           // onChange={handleChange}
-//           className="w-full p-2 bg-transparent border border-white/20 rounded placeholder-gray-400"
-//           required
-//         />
-//         <input
-//           type="file"
-//           name="resume"
-//           accept=".pdf,.docx"
-//           // onChange={handleChange}
-//           className="w-full p-2 bg-transparent border border-white/20 rounded text-gray-300"
-//           required
-//         />
-//         <textarea
-//           name="coverLetter"
-//           placeholder="Write your cover letter..."
-//           // value={form.coverLetter}
-//           // onChange={handleChange}
-//           className="w-full p-2 bg-transparent border border-white/20 rounded h-32 placeholder-gray-400"
-//           required
-//         ></textarea>
-//         <button
-//           type="submit"
-//           className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-//         >
-//           Submit Application
-//         </button>
-//       </form>
-//     </div>
-
-//   )
-// }
-
-// export default JobApplyPage
-
-
 
 
 
@@ -108,7 +46,7 @@ const JobApplyPage = () => {
     navigate("/status");
   };
 
-  if (!jobData) return <div className="text-center p-10 text-white">Loading...</div>;
+  if (!jobData) return <div className="text-center p-10 text-white">Loading...</div>
 
   return (
     <div className="p-6 max-w-3xl mx-auto bg-white/10 text-white backdrop-blur-md shadow-md rounded-md">

@@ -10,9 +10,9 @@ const Home = () => {
     <>
       {/* Hero-section starts here */}
 
-      <div className=" hero-section border-b-2 border-gray-500 grid place-items-center p-16 gap-6 grid-cols-2">
+      <div className=" hero-section border-b-2 border-gray-500 grid place-items-center p-16 gap-6 grid-rows-2 md:grid-cols-2">
         <div className="hero-text-section w-[50] pr-4">
-          <h1 className="text-4xl pb-20 font-bold text-[#c1dcf7]">
+          <h1 className="sm:text-center md:text-justify text-4xl pb-20 font-bold text-[#c1dcf7]">
             Discover Your Perfect Job: Matching Your Interests and Skills
           </h1>
           <p className="text-[#93b1b5]">
