@@ -78,7 +78,7 @@ const JobCard = () => {
               <img
                 src={data.logo}
                 alt="job-logo"
-                className="w-12 h-12 object-contain"
+                className="w-8 h-8 object-contain"
               />
             </div>
 
@@ -104,7 +104,7 @@ const JobCard = () => {
           {/* RIGHT: Apply Button */}
           <div className="w-full sm:w-auto">
             <Link to={`/apply/${data.id}`}>
-              <button className="w-full sm:w-auto flex justify-center items-center gap-1 text-xs bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-600 border border-blue-600 transition-all">
+              <button className="flex gap-2 items-center justify-center font-sm rounded-md p-1.5 bg-white/10 hover:bg-white/20 text-white">
                 Apply Now <span>→</span>
               </button>
             </Link>

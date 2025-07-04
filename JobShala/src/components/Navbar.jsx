@@ -160,7 +160,7 @@ const Navbar = () => {
           <img
             src={JobShalaLogo}
             alt="JobShala Logo"
-            className="w-40 h-auto object-contain"
+            className=" w-20 md:w-40  h-auto object-contain"
           />
         </Link>
 
@@ -209,7 +209,7 @@ const Navbar = () => {
           aria-label="Close menu"
           className="absolute top-4 right-4 text-white hover:text-gray-300 focus:outline-none"
         >
-          <FaTimes size={24} />
+          <FaTimes size={20} />
         </button>
 
         <Link
