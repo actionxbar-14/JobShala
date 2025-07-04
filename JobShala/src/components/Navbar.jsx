@@ -168,15 +168,22 @@ const Navbar = () => {
         <nav className="hidden md:flex gap-6 items-center">
           <Link
             to="/"
-            className="text-gray-300 hover:text-white px-4 py-2 transition duration-300"
+            className="w-full  text-center rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
           >
             Home
           </Link>
-          <Link
-            to="/status"
-            className="text-gray-300 hover:text-white px-4 py-2 transition duration-300"
+        
+           <Link
+            to="/JobDashboard"
+            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
           >
-            Applied Jobs
+            Dashboard
+          </Link>
+            <Link
+            to="/status"
+            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+          >
+            Jobs
           </Link>
         </nav>
 
@@ -218,6 +225,13 @@ const Navbar = () => {
           className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
         >
           Applied Jobs
+        </Link>
+         <Link
+          to="/JobDashboard"
+          onClick={toggleMenu}
+          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+        >
+          Dashboard
         </Link>
       </div>
     </header>

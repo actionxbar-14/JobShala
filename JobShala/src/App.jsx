@@ -6,6 +6,7 @@ import JobApplyPage from './pages/JobApplyPage'
 import JobStatusPage from './pages/JobStatusPage'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import JobDashboard from './pages/JobDashboard'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/Joblist" element={<JobListPage/>}/>
             <Route path="/apply/:id" element={<JobApplyPage/>}/>
             <Route path='/status' element={<JobStatusPage/>}/>
+            <Route path='/JobDashboard' element={<JobDashboard/>}/>
           </Routes>
 
           <Footer/>
