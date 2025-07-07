@@ -1,11 +1,17 @@
 import React from 'react'
+import Auth from "../components/Auth.jsx"
+
 
 const AuthPage = () => {
   return (
     <div>
-      <AuthPage/>
+      <Auth/>
     </div>
   )
 }
 
 export default AuthPage
+
+
+
+  

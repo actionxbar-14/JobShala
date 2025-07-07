@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const AuthPage = () => {
+const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const toggleAuthMode = () => setIsLogin(!isLogin);
 
@@ -61,4 +61,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Auth;

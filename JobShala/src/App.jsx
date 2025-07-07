@@ -7,7 +7,7 @@ import JobStatusPage from './pages/JobStatusPage'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import JobDashboard from './pages/JobDashboard'
-import AuthPage from './components/Auth'
+import AuthPage from './pages/AuthPage'
 
 const App = () => {
 
