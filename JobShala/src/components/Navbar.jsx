@@ -186,6 +186,13 @@ const Navbar = () => {
           >
             Jobs
           </Link>
+
+           <Link
+            to="/AuthPage"
+            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+          >
+            Login
+          </Link>
         </nav>
 
         {/* MOBILE TOGGLE */}
@@ -223,7 +230,7 @@ const Navbar = () => {
         <Link
           to="/status"
           onClick={toggleMenu}
-          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+          className="w-full text-center py-3 rounded-lg bg-white/5 hover:bg-white/20 text-white font-medium"
         >
           Applied Jobs
         </Link>
@@ -233,6 +240,14 @@ const Navbar = () => {
           className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
         >
           Dashboard
+        </Link>
+
+        <Link
+          to="/AuthPage"
+          onClick={toggleMenu}
+          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+        >
+         login
         </Link>
       </div>
     </header>
