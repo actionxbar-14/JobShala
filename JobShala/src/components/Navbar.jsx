@@ -160,7 +160,8 @@ const Navbar = () => {
           <img
             src={JobShalaLogo}
             alt="JobShala Logo"
-            className=" w-20 md:w-40  h-auto object-contain"
+            className=" md:w-40  h-auto object-contain"
+            style={{"width":"180px"}}
           />
         </Link>
 
