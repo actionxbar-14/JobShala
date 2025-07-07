@@ -146,6 +146,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import JobShalaLogo from "../assets/Images/JobShalaLogo.png";
+import { IoMdHome } from "react-icons/io";
+import { AiOutlineLogin } from "react-icons/ai";
+import { FaBriefcase } from "react-icons/fa6";
+import { FaChartLine } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -169,29 +173,29 @@ const Navbar = () => {
         <nav className="hidden md:flex gap-6 items-center">
           <Link
             to="/"
-            className="w-full  text-center rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+            className="w-full flex items-center justify-center gap-1 text-sm text-center rounded-md px-2 py-1.5 hover:bg-white/5  text-white/80"
           >
-            Home
+           <IoMdHome size={28} /> Home
           </Link>
         
            <Link
             to="/JobDashboard"
-            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+            className="w-full flex items-center justify-center gap-1 text-sm text-center rounded-md px-2 py-1.5 hover:bg-white/5  text-white/80"
           >
-            Dashboard
+           <FaChartLine /> Dashboard 
           </Link>
             <Link
             to="/status"
-            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+            className="w-full flex items-center justify-center gap-2 text-sm text-center rounded-md px-2 py-1.5 hover:bg-white/5  text-white/80"
           >
-            Jobs
+            <FaBriefcase />  Application 
           </Link>
 
            <Link
             to="/AuthPage"
-            className="w-full text-center  rounded-md px-2 py-1.5 bg-white/5 hover:bg-white/20 text-white"
+            className="w-full flex items-center justify-center gap-1 text-sm text-center rounded-md px-2 py-1.5 hover:bg-white/5  text-white/80"
           >
-            Login
+            Login <AiOutlineLogin />
           </Link>
         </nav>
 
@@ -223,31 +227,31 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={toggleMenu}
-          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+          className="w-full text-center flex items-center justify-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
         >
-          Home
+            <IoMdHome size={28} /> Home
         </Link>
         <Link
           to="/status"
           onClick={toggleMenu}
-          className="w-full text-center py-3 rounded-lg bg-white/5 hover:bg-white/20 text-white font-medium"
+          className="w-full text-center flex items-center justify-center gap-1 py-3 rounded-lg bg-white/5 hover:bg-white/20 text-white font-medium"
         >
-          Applied Jobs
+          <FaBriefcase /> Applications
         </Link>
          <Link
           to="/JobDashboard"
           onClick={toggleMenu}
-          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+          className="w-full text-center py-3 rounded-lg flex items-center justify-center gap-1  bg-white/10 hover:bg-white/20 text-white font-medium"
         >
-          Dashboard
+          <FaChartLine />  Dashboard
         </Link>
 
         <Link
           to="/AuthPage"
           onClick={toggleMenu}
-          className="w-full text-center py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
+          className="w-full text-center flex items-center justify-center gap-1  py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium"
         >
-         login
+          login <AiOutlineLogin />
         </Link>
       </div>
     </header>

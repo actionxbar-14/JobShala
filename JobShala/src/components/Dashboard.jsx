@@ -208,7 +208,7 @@ const Dashboard = ({ role = "candidate" }) => {
     <div className="min-h-screen flex flex-col md:flex-row bg-[#001a26] text-gray-200">
       {/* Desktop Sidebar */}
       <aside className="w-64 bg-white/5 backdrop-blur-md border-r border-white/10 hidden md:block z-[9998]">
-        <div className="p-6 text-xl font-bold">JobBazar</div>
+        <div className="p-6 text-xl font-bold">JobShala</div>
         <nav className="flex flex-col gap-1 px-2">
           {menus[role].map(({ key, label, icon }) => (
             <button
