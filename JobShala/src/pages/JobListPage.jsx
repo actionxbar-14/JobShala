@@ -1,42 +1,24 @@
-// import React from "react";
-// import JobListFooter from "../components/JobListFooter";
-// import JobListCard from "../components/JobListCard.jsx";
 
-// const JobListPage = () => {
-//   return (
-//     <>
-//       <div className="flex flex-wrap  border-b-2 border-white/5 justify-center items-center bg-white/5 p-4 pb-8">
-//         <JobListCard />
-//       </div>
-//       <JobListFooter />
-//     </>
-//   );
-// };
-
-// export default JobListPage;
 
 
 import React from "react";
 import JobListFooter from "../components/JobListFooter";
 import JobListCard from "../components/JobListCard";
+import CompanyCard from "../components/CompanyCard";
 
-/**
- * JobListPage – wraps the JobListCard carousel/grid + a footer.
- * Uses a neutral container so JobListCard handles its own responsive layout.
- */
 const JobListPage = () => {
   return (
-    <>
-      {/* Top Band */}
-      <section className="bg-white/5 border-b border-white/10 py-6 px-4 sm:px-8">
+    <div className="overflow-x-hidden">
+      {/* Top band */}
+      <section className="bg-white/5 border-b border-white/10 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <JobListCard />
+          <JobListCard/>
         </div>
       </section>
 
       {/* Footer */}
       <JobListFooter />
-    </>
+    </div>
   );
 };
 

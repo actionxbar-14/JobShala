@@ -8,6 +8,8 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import JobDashboard from './pages/JobDashboard'
 import AuthPage from './pages/AuthPage'
+import ViewJobPage from './pages/ViewJobPage'
+
 
 const App = () => {
 
@@ -26,6 +28,7 @@ const App = () => {
             <Route path='/status' element={<JobStatusPage/>}/>
             <Route path='/JobDashboard' element={<JobDashboard/>}/>
             <Route path='/AuthPage' element={<AuthPage/>}/>
+            <Route path='/ViewJob' element={<ViewJobPage/>}/>
           </Routes>
 
           <Footer/>
